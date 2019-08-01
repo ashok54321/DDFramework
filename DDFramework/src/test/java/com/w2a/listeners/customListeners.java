@@ -55,21 +55,13 @@ public class customListeners extends TestBase implements ITestListener{
 	
 	public void onTestSkipped(ITestResult arg0) {
 		
-		test.log(LogStatus.SKIP, arg0.getName().toUpperCase()+" skipped the test as the run mode NO");
-		
-		rep.endTest(test);
-		rep.flush();
+
 	}
 
 	public void onTestStart(ITestResult arg0) {
 		
 		test = rep.startTest(arg0.getName().toUpperCase());
-		
-		//Runmode - Y
-		
-		System.out.println(Testutil.isTestRunnable(arg0.getName(), excel));
-		
-		
+				
 	}
 
 	public void onTestSuccess(ITestResult arg0) {

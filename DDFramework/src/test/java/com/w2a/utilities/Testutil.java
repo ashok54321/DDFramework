@@ -36,19 +36,13 @@ public class Testutil extends TestBase {
 		int cols = excel.getColumnCount(sheetName);
 
 		Object[][] data = new Object[rows - 1][cols];
-		
-		//Hashtable<String,String> table = null;
-
+	
 		for (int rowNum = 2; rowNum <= rows; rowNum++) { // 2
-
-			//table = new Hashtable<String,String>();
-			
+				
 			for (int colNum = 0; colNum < cols; colNum++) {
 
 				data[rowNum-2][colNum]=excel.getCellData(sheetName, colNum, rowNum);
 				
-				//table.put(excel.getCellData(sheetName, colNum, 1), excel.getCellData(sheetName, colNum, rowNum));
-				//data[rowNum - 2][0] = table;
 			}
 
 		}
@@ -57,7 +51,7 @@ public class Testutil extends TestBase {
 	}
 	
 	
-	public static boolean isTestRunnable(String testName, ExcelReader excel) {
+	/*public static boolean isTestRunnable(String testName, ExcelReader excel) {
 		
 		String sheetName = "Test_Suite";
 		int rows = excel.getRowCount(sheetName);
@@ -80,5 +74,5 @@ public class Testutil extends TestBase {
 		}
 		
 		return false;
-	}
+	}*/
 }

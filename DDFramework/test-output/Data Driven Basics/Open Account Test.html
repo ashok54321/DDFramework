@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Open Account Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 01 14:37:24 IST 2019</td>
+<td>Started on:</td><td>Thu Aug 01 15:19:05 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (63 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22844 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,20 +67,43 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.w2a.testcase.OpenAccountTest.openAccountTest()'><b>openAccountTest</b><br>Test class: com.w2a.testcase.OpenAccountTest<br>Parameters: Neville Longbottom, Rupee</td>
-<td><div><pre>org.testng.SkipException: Skipping the test :OPENACCOUNTTEST as the run mode is NO
-	at com.w2a.testcase.OpenAccountTest.openAccountTest(OpenAccountTest.java:24)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2086673744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2086673744'><pre>org.testng.SkipException: Skipping the test :OPENACCOUNTTEST as the run mode is NO
-	at com.w2a.testcase.OpenAccountTest.openAccountTest(OpenAccountTest.java:24)
+<td title='com.w2a.testcase.OpenAccountTest.openAccountTest()'><b>openAccountTest</b><br>Test class: com.w2a.testcase.OpenAccountTest<br>Parameters: ashok kumar, Rupee<br/>
+<a href="#Output-223696575" onClick='toggleBox("Output-223696575", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-223696575" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-223696575">
+Click to see screenshot<br/>
+<a target="_blank" href=Thu_Aug_01_15_19_27_IST_2019.jpg>Screenshot</a><br/>
+<br><br/>
+<br><br/>
+<a target="_blank" href=Thu_Aug_01_15_19_27_IST_2019.jpg> <img src=Thu_Aug_01_15_19_27_IST_2019.jpg height=200 width=200></img></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: ashok kumar
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-8343GOC&apos;, ip: &apos;192.168.2.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.w2a.base.TestBase.select(TestBase.java:142)
+	at com.w2a.testcase.OpenAccountTest.openAccountTest(OpenAccountTest.java:25)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace223696575", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace223696575'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: ashok kumar
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-8343GOC&apos;, ip: &apos;192.168.2.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.w2a.base.TestBase.select(TestBase.java:142)
+	at com.w2a.testcase.OpenAccountTest.openAccountTest(OpenAccountTest.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,8 +130,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.w2a.testcase.OpenAccountTest@4940809c</td></tr>
+<td>22</td>
+<td>com.w2a.testcase.OpenAccountTest@29876704</td></tr>
 </table><p>
 </body>
 </html>

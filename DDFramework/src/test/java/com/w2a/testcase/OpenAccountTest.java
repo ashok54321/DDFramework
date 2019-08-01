@@ -19,11 +19,6 @@ public class OpenAccountTest extends TestBase {
 	@Test(dataProviderClass=Testutil.class, dataProvider="dp")
 	public void openAccountTest(String customer, String currency) throws InterruptedException {
 		
-		if(!Testutil.isTestRunnable("openAccountTest", excel)) {
-			
-			throw new SkipException("Skipping the test :"+"openAccountTest".toUpperCase()+" as the run mode is NO");
-		}
-		
 		click("openAccount_CSS");
 		Thread.sleep(2000);
 		
