@@ -80,22 +80,24 @@
 
 
 		<!-- Dependency for POI API -->
-		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.6</version>
+			<version>4.1.0</version>
 		</dependency>
 
 
-		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.6</version>
+			<version>4.1.0</version>
 		</dependency>
-	
-	
+
+
+
 		<!-- http://mvnrepository.com/artifact/dom4j/dom4j -->
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -112,12 +114,13 @@
 		</dependency>
 
 
-		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml-schemas</artifactId>
-			<version>3.6</version>
+			<version>4.1.0</version>
 		</dependency>
+
 
 
 		<dependency>

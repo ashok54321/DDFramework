@@ -3,21 +3,20 @@ package com.w2a.utilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Calendar;
 
 import org.apache.poi.common.usermodel.HyperlinkType;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Hyperlink;
+import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFFont;
+import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -95,9 +94,9 @@ public class ExcelReader {
 			return "";
 		
 		if(cell.getCellType()==CellType.STRING)
-			 return cell.getStringCellValue();
-		else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA ){	  
-		
+			  return cell.getStringCellValue();
+		else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA ){
+			  
 			  String cellText  = String.valueOf(cell.getNumericCellValue());
 			  if (HSSFDateUtil.isCellDateFormatted(cell)) {
 		           
@@ -110,19 +109,14 @@ public class ExcelReader {
 		           cellText = cal.get(Calendar.DAY_OF_MONTH) + "/" +
 		                      cal.get(Calendar.MONTH)+1 + "/" + 
 		                      cellText;
-		           
-		          
-
+		           	          
 		         }
-
 			  
 			  
 			  return cellText;
-		  } 
-		else if(cell.getCellType()==CellType.BLANK)
-			
-				return ""; 
-			else 
+		  }else if(cell.getCellType()==CellType.BLANK)
+		      return ""; 
+		  else 
 			  return String.valueOf(cell.getBooleanCellValue());
 		
 		}
@@ -155,10 +149,10 @@ public class ExcelReader {
 		if(cell==null)
 			return "";
 		
-	    if(cell.getCellType()==CellType.STRING)
-			return cell.getStringCellValue();
+	  if(cell.getCellType()==CellType.STRING)
+		  return cell.getStringCellValue();
 	  else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA ){
-		
+		  
 		  String cellText  = String.valueOf(cell.getNumericCellValue());
 		  if (HSSFDateUtil.isCellDateFormatted(cell)) {
 	           // format in form of M/D/YY
@@ -179,10 +173,9 @@ public class ExcelReader {
 		  
 		  
 		  return cellText;
-	  } else if(cell.getCellType()==CellType.BLANK)
-		  
-			return "";
-		else 
+	  }else if(cell.getCellType()==CellType.BLANK)
+	      return "";
+	  else 
 		  return String.valueOf(cell.getBooleanCellValue());
 		}
 		catch(Exception e){
@@ -298,7 +291,7 @@ public class ExcelReader {
 	    hlink_style.setFont(hlink_font);
 	    //hlink_style.setWrapText(true);
 
-	    Hyperlink link = createHelper.createHyperlink(HyperlinkType.FILE);
+	    XSSFHyperlink link = createHelper.createHyperlink(HyperlinkType.FILE);
 	    link.setAddress(url);
 	    cell.setHyperlink(link);
 	    cell.setCellStyle(hlink_style);
@@ -364,8 +357,8 @@ public class ExcelReader {
 				return false;
 			
 		XSSFCellStyle style = workbook.createCellStyle();
-		style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-		style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+		style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
+		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		
 		sheet=workbook.getSheetAt(index);
 		
@@ -407,9 +400,9 @@ public class ExcelReader {
 		workbook = new XSSFWorkbook(fis);
 		sheet=workbook.getSheet(sheetName);
 		XSSFCellStyle style = workbook.createCellStyle();
-		style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-		XSSFCreationHelper createHelper = workbook.getCreationHelper();
-		style.setFillPattern(HSSFCellStyle.NO_FILL);
+		style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
+		//XSSFCreationHelper createHelper = workbook.getCreationHelper();
+		style.setFillPattern(FillPatternType.NO_FILL);
 		
 	    
 	
@@ -503,18 +496,7 @@ public class ExcelReader {
 	}
 		
 	
-	// to run this on stand alone
-	public static void main(String arg[]) throws IOException{
-		
-		
-		ExcelReader datatable = null;
-		
-
-			 datatable = new ExcelReader("C:\\CM3.0\\app\\test\\Framework\\AutomationBvt\\src\\config\\xlfiles\\Controller.xlsx");
-				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
-					System.out.println(datatable.getCellData("TC5", col, 1));
-				}
-	}
+	
 	
 	
 }

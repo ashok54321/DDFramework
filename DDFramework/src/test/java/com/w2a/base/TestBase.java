@@ -30,7 +30,7 @@ import com.w2a.utilities.ExcelReader;
 import com.w2a.utilities.ExtentManager;
 import com.w2a.utilities.Testutil;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 public class TestBase {
 
@@ -111,14 +111,14 @@ public class TestBase {
 	
 	public void click(String locator) {
 		
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		driver.findElement(By.xpath(OR.getProperty(locator))).click();
 		test.log(LogStatus.INFO, "Click on : "+locator);
 	}
 	
 	
 	public void type(String locator, String value) {
 		
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
 		test.log(LogStatus.INFO, "typing in :"+locator+" entered value as "+value);
 	}
 	
@@ -176,6 +176,7 @@ public class TestBase {
 			test.log(LogStatus.FAIL, " Verification Failed with exception : "+t.getMessage());
 			test.log(LogStatus.FAIL, test.addScreenCapture(Testutil.screenshotName));
 		}
+		
 		
 	}
 	

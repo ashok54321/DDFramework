@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="20.010">
+           time="19.944">
   <properties />
   
   
-            <testcase name="addCustomerTest" time="4.772" classname="com.w2a.testcase.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="5.001" classname="com.w2a.testcase.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="5.408" classname="com.w2a.testcase.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="4.829" classname="com.w2a.testcase.AddCustomerTest" />
+            <testcase name="addCustomerTest" time="4.941" classname="com.w2a.testcase.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="4.919" classname="com.w2a.testcase.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="5.257" classname="com.w2a.testcase.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="4.827" classname="com.w2a.testcase.AddCustomerTest" />
       
 </testsuite>
